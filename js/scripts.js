@@ -52,6 +52,8 @@ const data = [
   const imcInfo = document.querySelector("#imc-info span");
   
   const backBtn = document.querySelector("#back-btn");
+  const image = document.querySelector("#image");
+  
   
   // Funções
   function createTable(data) {
@@ -132,27 +134,38 @@ const data = [
   
     imcNumber.innerText = imc;
     imcInfo.innerText = info;
+
   
     switch (info) {
       case "Magreza":
         imcNumber.classList.add("low");
         imcInfo.classList.add("low");
+        image.setAttribute("src","/img/magreza.png");
+        image.style.display="block"
         break;
       case "Normal":
         imcNumber.classList.add("good");
         imcInfo.classList.add("good");
+        image.setAttribute("src","/img/normal.png");
+        image.style.display="block"
         break;
       case "Sobrepeso":
         imcNumber.classList.add("low");
         imcInfo.classList.add("low");
+        image.setAttribute("src","/img/sobrepeso.png");
+        image.style.display="block"
         break;
       case "Obesidade":
         imcNumber.classList.add("medium");
         imcInfo.classList.add("medium");
+        image.setAttribute("src","/img/obsidade.png");
+        image.style.display="block"
         break;
       case "Obesidade grave":
         imcNumber.classList.add("high");
         imcInfo.classList.add("high");
+        image.setAttribute("src","/img/obsidade grave.png");
+        image.style.display="block"
         break;
     }
   
